@@ -7,7 +7,7 @@ import { useUser } from './useUser';
 
 const useOnPlay = (songs: Song[]) => {
   const player = usePlayer();
-  //const subscribeModal = useSubscribeModal();
+  const subscribeModal = useSubscribeModal();
   const authModal = useAuthModal();
   const { subscription, user } = useUser();
 
@@ -16,6 +16,7 @@ const useOnPlay = (songs: Song[]) => {
       return authModal.onOpen();
     }
 
+    // Commenting because stripe account not set
     // if (!subscription) {
     //   return subscribeModal.onOpen();
     // }

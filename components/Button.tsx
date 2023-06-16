@@ -4,8 +4,8 @@ import { forwardRef } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
-  disabled: boolean;
-  type: 'button' | 'submit' | 'reset' | undefined;
+  disabled?: boolean;
+  type?: 'button' | 'submit' | 'reset' | undefined;
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
